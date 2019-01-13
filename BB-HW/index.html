@@ -1,30 +1,32 @@
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Mocha Tests</title>
     <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  </head>
+  <body>
+    <!-- YOUR HTML HERE -->
+    <div id="hero-stats">
+      <h1>Hero Stats: <br /></h1>
+    </div>
+    <img id="inn" onclick="resetHealth()" />
 
+    <img id="dagger" onclick="equipDagger()" />
 
-  <!-- YOUR HTML HERE -->
-<img id = "inn" onclick="resetHealth()">
+    <img id="bag" onclick="equipWeapon(hero)" />
 
-<img id = "dagger" onclick="equipDagger()">
+    <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+    <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+    <div id="mocha"></div>
 
-<img id = "bag" onclick="equipWeapon(hero)">
-
-
-  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
-  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
-  <div id="mocha"></div>
-
-  <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
-  <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sinon@3/pkg/sinon.js"></script>
-  <script>mocha.setup('bdd')</script>
-  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
-  <script src="game_logic.test.js"></script>
-
-</body>
+    <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+    <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sinon@3/pkg/sinon.js"></script>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+    <script src="game_logic.test.js"></script>
+  </body>
 </html>
