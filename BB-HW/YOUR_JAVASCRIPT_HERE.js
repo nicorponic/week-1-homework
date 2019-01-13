@@ -21,9 +21,14 @@ function pickUpItem(hero, obj) {
     hero.inventory.push(obj);
 }
 
-function equipWeapon() {
+
+function equipWeapon(hero) {
     
+    if (hero.inventory.length > 0) {
+        hero.weapon = hero.inventory[0];
+    }
 }
+
 
 
 function equipDagger() {
