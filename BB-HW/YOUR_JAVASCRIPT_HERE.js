@@ -1,28 +1,37 @@
 // Write your JS here
 
 const hero = {
-    name: "Joe",
-    heroic: true,
-    inventory: [],
-    health: 10,
+  name: "",
+  heroic: true,
+  inventory: [],
+  health: 10,
 
-    weapon: {
-        type: "projectile",
-        damage: 2
-    }
-
-    
+  weapon: {
+    type: "",
+    damage: 2
+  }
 };
 
-function rest(obj)  { 
-    obj.health = 10
-    return obj;
+function rest(obj) {
+  obj.health = 10;
+  return obj;
 }
 
-function pickUpItem()  {
-
+function pickUpItem(hero, obj) {
+    hero.inventory.push(obj);
 }
 
-function equipWeapon()   {
+function equipWeapon() {
+    
+}
 
+
+function equipDagger() {
+    hero.weapon = {type: "dagger", damage: 2}
+    hero.inventory.push(hero.weapon)
+}
+
+
+function resetHealth() {
+  hero.health = 10;
 }
